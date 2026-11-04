@@ -1,662 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <base target="_top">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <meta name="theme-color" content="#0E1A24" />
-  <meta name="description" content="Pest control in Prayagraj since 1994. Odorless termite, cockroach, bed bug, honey bee, rodent and mosquito treatment with written warranty. 5.0 on Google (393 reviews). Call 087379 61540." />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"PestControlService","name":"Indian Pests Eradicator Services (IPES)","telephone":"+918737961540","email":"ipesallahabad@gmail.com","address":{"@type":"PostalAddress","streetAddress":"60 Feet Rd, Kasari Masari, Chakiya, Rajrooppur","addressLocality":"Prayagraj","addressRegion":"Uttar Pradesh","postalCode":"211016","addressCountry":"IN"},"areaServed":"Prayagraj","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"393"}}
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script>
-    tailwind.config = { theme: { extend: {
-      fontFamily: { sans: ['Hind','system-ui','sans-serif'], display: ['"Bricolage Grotesque"','Hind','sans-serif'] },
-      colors: {
-        ink: '#0E1A24', paper: '#F5F7F6', line: '#DDE3E0',
-        brand: { 50:'#FDECEF', 600:'#D7263D', 700:'#B01C30' },
-        neem: { 50:'#E8F3EE', 600:'#1B6B4C', 700:'#14523A' },
-        turmeric: '#F2A900'
-      }
-    } } }
-  </script>
-  <style>
-    *{box-sizing:border-box}
-    html,body{overflow-x:hidden;width:100%}
-    body{background:#F5F7F6;color:#0E1A24}
-    :focus-visible{outline:3px solid #1B6B4C;outline-offset:2px;border-radius:8px}
-    .h-display{font-family:'Bricolage Grotesque','Hind',sans-serif;letter-spacing:-0.025em}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>IPES Prayagraj | Indian Pests Eradicator Services</title>
+  <meta name="description" content="5.0★ Rated (393+ Google Reviews) Pest Control in Prayagraj. Termite, Cockroach, Honey Bee Hive, Bed Bug, Rodent & Mosquito Control. Call 087379 61540.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="Logo.jpg" type="image/jpeg">
 
-    /* Hotspots on the house */
-    .hs{position:absolute;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:999px;background:#D7263D;color:#fff;border:3px solid #fff;box-shadow:0 4px 14px rgba(14,26,36,.28);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;transition:transform .18s ease,background .18s ease;opacity:0;animation:hsIn .5s cubic-bezier(.2,1.4,.4,1) forwards}
-    .hs::after{content:"";position:absolute;inset:-9px;border-radius:999px;border:2px solid #D7263D;opacity:0;animation:hsPulse 2.2s ease-out infinite}
-    .hs:hover{transform:translate(-50%,-50%) scale(1.12)}
-    .hs.on{background:#0E1A24;transform:translate(-50%,-50%) scale(1.18)}
-    .hs.on::after{border-color:#0E1A24}
-    .hs-chip{position:absolute;transform:translate(-50%,-165%);white-space:nowrap;background:#0E1A24;color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:8px;pointer-events:none}
-    @keyframes hsIn{from{opacity:0;transform:translate(-50%,-50%) scale(.2)}to{opacity:1}}
-    @keyframes hsPulse{0%{transform:scale(.7);opacity:.7}100%{transform:scale(1.5);opacity:0}}
-    @keyframes riseIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-    .rise{opacity:0;animation:riseIn .7s cubic-bezier(.16,1,.3,1) forwards}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    details.faq summary{list-style:none;cursor:pointer}
-    details.faq summary::-webkit-details-marker{display:none}
-    details.faq[open] .faq-plus{transform:rotate(45deg)}
-    .faq-plus{transition:transform .2s ease}
-    .svc-card{transition:transform .22s cubic-bezier(.16,1,.3,1),box-shadow .22s ease}
-    .svc-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(14,26,36,.25)}
+    html, body {
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      background: #f8fafc;
+      font-family: system-ui, -apple-system, sans-serif;
+      -webkit-overflow-scrolling: touch;
+    }
 
-    @media (prefers-reduced-motion: reduce){
-      .hs,.rise{animation:none;opacity:1}
-      .hs::after{animation:none}
-      html{scroll-behavior:auto}
-    }
-  </style>
+    .iframe-crop-box {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+
+    .iframe-crop-box iframe {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 38px);
+      border: none;
+      display: block;
+    }
+
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      color: #0f172a;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid #e2e8f0;
+      border-top-color: #dc2626;
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+      margin-bottom: 10px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
+<body>
 
-<body class="font-sans antialiased pb-[72px] md:pb-0 selection:bg-brand-600 selection:text-white">
+  <div id="loader">
+    <div class="spinner"></div>
+    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: #475569;">LOADING IPES PRAYAGRAJ...</span>
+  </div>
 
-<a href="#services" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to services</a>
+  <div class="iframe-crop-box">
+    <iframe 
+      id="gasFrame"
+      title="IPES Prayagraj | Indian Pests Eradicator Services"
+      src="https://script.google.com/macros/s/AKfycbwXqmQp7Z70b7fPlrs6cm5SNyo7xSO6oYY52XimHRZ593UyjDxtVzczXrB8wVUBbG1-Hw/exec" 
+      allow="camera *; microphone *; geolocation *; clipboard-write *; fullscreen *"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation allow-modals"
+      onload="document.getElementById('loader').classList.add('hidden');">
+    </iframe>
+  </div>
 
-<!-- ================= HEADER ================= -->
-<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-line">
-  <div class="max-w-[1240px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
-    <a href="#top" class="flex items-center gap-3 min-w-0" aria-label="IPES Prayagraj home">
-      <span class="w-11 h-11 rounded-xl bg-white ring-1 ring-line p-1 flex items-center justify-center overflow-hidden shrink-0">
-        <img id="brandLogoImg" alt="IPES logo" class="w-full h-full object-contain hidden" />
-        <svg id="brandLogoSvg" viewBox="0 0 120 120" class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="120" height="120" rx="14" fill="#fff"/>
-          <path d="M8 50 L60 8 L112 50" fill="none" stroke="#e11d1d" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M22 48 L22 104 Q22 112 30 112 L90 112 Q98 112 98 104 L98 48" fill="none" stroke="#e11d1d" stroke-width="7" stroke-linecap="round"/>
-          <ellipse cx="60" cy="40" rx="10" ry="11" fill="#d97706"/><ellipse cx="60" cy="82" rx="13.5" ry="25" fill="#f59e0b"/>
-          <g transform="translate(60,69) rotate(-46)"><rect x="-19" y="-8" width="38" height="15" rx="2" fill="#fde047"/><text x="0" y="4.5" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="14" fill="#000">IPES</text></g>
-        </svg>
-      </span>
-      <span class="min-w-0">
-        <span class="flex items-center gap-2">
-          <span class="h-display font-extrabold text-[17px] sm:text-lg leading-none whitespace-nowrap"><span class="text-brand-600">IPES</span> Prayagraj</span>
-          <span class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-800 ring-1 ring-amber-200"><i class="fa-solid fa-star text-turmeric text-[10px]"></i>5.0 · 393</span>
-        </span>
-        <span class="block text-[11px] text-slate-500 leading-tight mt-1 truncate" data-en="Indian Pests Eradicator Services" data-hi="इंडियन पेस्ट्स इरेडिकेटर सर्विसेज">Indian Pests Eradicator Services</span>
-      </span>
-    </a>
-
-    <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600" aria-label="Main">
-      <a href="#services" class="hover:text-ink" data-en="Services" data-hi="सेवाएं">Services</a>
-      <a href="#estimator" class="hover:text-ink" data-en="Price calculator" data-hi="प्राइस कैलकुलेटर">Price calculator</a>
-      <a href="#how" class="hover:text-ink" data-en="How it works" data-hi="कैसे काम होता है">How it works</a>
-      <a href="#gallery" class="hover:text-ink" data-en="Our work" data-hi="हमारा काम">Our work</a>
-      <a href="#faq" class="hover:text-ink" data-en="Questions" data-hi="सवाल-जवाब">Questions</a>
-      <a href="#contact" class="hover:text-ink" data-en="Find us" data-hi="संपर्क">Find us</a>
-    </nav>
-
-    <div class="flex items-center gap-2">
-      <button onclick="toggleLanguage()" class="px-3 h-9 rounded-xl bg-paper hover:bg-line text-ink font-bold text-xs ring-1 ring-line cursor-pointer" aria-label="Switch language"><span id="langLabel">हिंदी</span></button>
-      <button id="menuBtn" onclick="toggleMenu()" class="md:hidden w-9 h-9 rounded-xl bg-paper ring-1 ring-line flex items-center justify-center cursor-pointer" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-    </div>
-  </div>
-  <div id="mobileMenu" class="hidden md:hidden border-t border-line bg-white">
-    <div class="px-4 py-3 grid grid-cols-2 gap-2 text-sm font-semibold">
-      <a onclick="toggleMenu()" href="#services" class="px-3 py-3 rounded-xl bg-paper" data-en="Services" data-hi="सेवाएं">Services</a>
-      <a onclick="toggleMenu()" href="#estimator" class="px-3 py-3 rounded-xl bg-paper" data-en="Price calculator" data-hi="प्राइस कैलकुलेटर">Price calculator</a>
-      <a onclick="toggleMenu()" href="#how" class="px-3 py-3 rounded-xl bg-paper" data-en="How it works" data-hi="कैसे काम होता है">How it works</a>
-      <a onclick="toggleMenu()" href="#gallery" class="px-3 py-3 rounded-xl bg-paper" data-en="Our work" data-hi="हमारा काम">Our work</a>
-      <a onclick="toggleMenu()" href="#faq" class="px-3 py-3 rounded-xl bg-paper" data-en="Questions" data-hi="सवाल-जवाब">Questions</a>
-      <a onclick="toggleMenu()" href="#contact" class="px-3 py-3 rounded-xl bg-paper" data-en="Find us" data-hi="संपर्क">Find us</a>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-
-<!-- ================= HERO ================= -->
-<section class="max-w-[1240px] mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-10">
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-
-    <div class="lg:col-span-6">
-      <p class="rise inline-flex items-center gap-2 text-sm font-semibold text-neem-700 bg-neem-50 ring-1 ring-neem-600/20 px-3 py-1.5 rounded-full" style="animation-delay:.05s">
-        <i class="fa-solid fa-certificate text-xs"></i>
-        <span data-en="Government certified, serving Prayagraj since 1994" data-hi="सरकार से प्रमाणित, 1994 से प्रयागराज में सेवा">Government certified, serving Prayagraj since 1994</span>
-      </p>
-      <h1 id="heroHeadline" class="rise h-display font-extrabold text-[2.1rem] sm:text-5xl lg:text-[3.4rem] leading-[1.05] mt-5 max-w-xl" style="animation-delay:.15s"></h1>
-      <p class="rise text-base sm:text-lg text-slate-600 mt-5 max-w-lg leading-relaxed" style="animation-delay:.25s" data-en="Tap a spot on the house to see what we treat there, what it costs, and book on WhatsApp in one tap." data-hi="घर के किसी भी हिस्से पर टैप करें। देखें वहाँ हम क्या ट्रीट करते हैं, कितना खर्च आता है, और एक टैप में व्हाट्सएप पर बुक करें।">Tap a spot on the house to see what we treat there, what it costs, and book on WhatsApp in one tap.</p>
-
-      <div class="rise flex flex-wrap items-center gap-3 mt-7" style="animation-delay:.35s">
-        <button onclick="openWA('Free Home Inspection Request')" class="inline-flex items-center gap-2.5 px-6 h-12 rounded-2xl bg-[#1FA855] hover:bg-[#188a45] text-white font-bold text-[15px] shadow-lg shadow-green-900/15 cursor-pointer transition">
-          <i class="fa-brands fa-whatsapp text-xl"></i><span data-en="Book a free inspection" data-hi="फ्री जांच बुक करें">Book a free inspection</span>
-        </button>
-        <a class="phoneLink inline-flex items-center gap-2.5 px-6 h-12 rounded-2xl bg-white ring-1 ring-line hover:ring-ink text-ink font-bold text-[15px] transition" href="#"><i class="fa-solid fa-phone text-brand-600 text-sm"></i><span class="phoneText"></span></a>
-      </div>
-
-      <ul id="heroBadges" class="rise grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8 max-w-xl" style="animation-delay:.45s"></ul>
-    </div>
-
-    <!-- Interactive house -->
-    <div class="lg:col-span-6">
-      <div class="bg-white rounded-[28px] ring-1 ring-line shadow-[0_30px_60px_-30px_rgba(14,26,36,.35)] p-3 sm:p-5">
-        <div id="houseWrap" class="relative w-full rounded-2xl overflow-hidden bg-gradient-to-b from-[#EAF1EE] to-[#F5F7F6]" style="aspect-ratio:580/440">
-          <svg viewBox="0 0 580 440" class="absolute inset-0 w-full h-full" role="img" aria-label="Cross-section of a house showing where pests commonly hide">
-            <rect x="0" y="390" width="580" height="50" fill="#DCE5E0"/>
-            <path d="M0 390H580" stroke="#0E1A24" stroke-width="2"/>
-            <!-- roof + body -->
-            <path d="M52 160 L290 52 L528 160 Z" fill="#fff" stroke="#0E1A24" stroke-width="3" stroke-linejoin="round"/>
-            <rect x="70" y="160" width="440" height="230" fill="#fff" stroke="#0E1A24" stroke-width="3"/>
-            <path d="M70 272H510M300 160V272M232 272V390M392 272V390" stroke="#0E1A24" stroke-width="2.5" fill="none"/>
-            <!-- foundation band -->
-            <rect x="70" y="378" width="440" height="12" fill="#D5DDD9"/>
-            <path d="M92 384h18M130 384h14M172 384h22M222 384h16M270 384h20M330 384h14M372 384h22M424 384h18M468 384h20" stroke="#8C9A93" stroke-width="2" stroke-linecap="round"/>
-            <!-- bedroom -->
-            <rect x="98" y="236" width="116" height="30" rx="6" fill="#E8F3EE" stroke="#0E1A24" stroke-width="2"/>
-            <rect x="104" y="224" width="30" height="16" rx="5" fill="#fff" stroke="#0E1A24" stroke-width="2"/>
-            <path d="M110 266v6M202 266v6" stroke="#0E1A24" stroke-width="2.5"/>
-            <rect x="238" y="196" width="40" height="46" rx="3" fill="#EEF2F0" stroke="#0E1A24" stroke-width="2"/>
-            <path d="M258 196v46M238 219h40" stroke="#0E1A24" stroke-width="1.5"/>
-            <!-- balcony + hive -->
-            <path d="M300 160H510" stroke="#0E1A24" stroke-width="3"/>
-            <path d="M312 252H498M312 252v20M360 252v20M408 252v20M456 252v20M498 252v20" stroke="#0E1A24" stroke-width="2.5" fill="none"/>
-            <path d="M430 160v14" stroke="#0E1A24" stroke-width="2"/>
-            <ellipse cx="430" cy="192" rx="16" ry="22" fill="#F2A900" stroke="#0E1A24" stroke-width="2"/>
-            <path d="M416 186h28M417 196h26M420 206h20" stroke="#0E1A24" stroke-width="1.5" opacity=".55"/>
-            <!-- kitchen -->
-            <rect x="84" y="290" width="140" height="22" rx="3" fill="#EEF2F0" stroke="#0E1A24" stroke-width="2"/>
-            <rect x="84" y="336" width="140" height="42" fill="#EEF2F0" stroke="#0E1A24" stroke-width="2"/>
-            <circle cx="120" cy="333" r="5" fill="none" stroke="#0E1A24" stroke-width="2"/><circle cx="146" cy="333" r="5" fill="none" stroke="#0E1A24" stroke-width="2"/>
-            <!-- living -->
-            <rect x="252" y="330" width="120" height="48" rx="9" fill="#fff" stroke="#0E1A24" stroke-width="2.5"/>
-            <rect x="262" y="344" width="100" height="34" rx="7" fill="#E8F3EE" stroke="#0E1A24" stroke-width="2"/>
-            <rect x="292" y="286" width="40" height="28" rx="2" fill="#fff" stroke="#0E1A24" stroke-width="2"/>
-            <!-- garage -->
-            <path d="M408 372h88a8 8 0 0 0 8-8v-8a8 8 0 0 0-8-8h-10l-10-14h-46l-12 14h-10a8 8 0 0 0-8 8v8a8 8 0 0 0 8 8z" fill="#2A3A47" stroke="#0E1A24" stroke-width="2"/>
-            <circle cx="430" cy="378" r="8" fill="#fff" stroke="#0E1A24" stroke-width="3"/><circle cx="480" cy="378" r="8" fill="#fff" stroke="#0E1A24" stroke-width="3"/>
-            <!-- puddle + sign -->
-            <ellipse cx="38" cy="392" rx="28" ry="6" fill="#BFD9E6"/>
-            <path d="M558 290v100" stroke="#0E1A24" stroke-width="3"/>
-            <rect x="536" y="288" width="42" height="28" rx="5" fill="#F2A900" stroke="#0E1A24" stroke-width="2"/>
-            <text x="557" y="307" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="12" fill="#0E1A24">AMC</text>
-          </svg>
-          <div id="hotspotLayer" class="absolute inset-0"></div>
-        </div>
-
-        <div id="hotspotPanel" class="mt-3 sm:mt-4"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TRUST STRIP ================= -->
-<section class="border-y border-line bg-white" aria-label="Trust">
-  <div class="max-w-[1240px] mx-auto px-4 sm:px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-5">
-    <div><div class="h-display font-extrabold text-3xl"><span data-count="30">0</span>+</div><div class="text-sm text-slate-600" data-en="years protecting Prayagraj homes" data-hi="साल से प्रयागराज के घरों की सुरक्षा">years protecting Prayagraj homes</div></div>
-    <div><div class="h-display font-extrabold text-3xl"><span data-count="393">0</span></div><div class="text-sm text-slate-600" data-en="five-star Google reviews" data-hi="गूगल पर 5-स्टार रिव्यू">five-star Google reviews</div></div>
-    <div><div class="h-display font-extrabold text-3xl">10 <span class="text-xl" data-en="yrs" data-hi="वर्ष">yrs</span></div><div class="text-sm text-slate-600" data-en="written termite warranty available" data-hi="तक की लिखित दीमक वारंटी उपलब्ध">written termite warranty available</div></div>
-    <div><div class="h-display font-extrabold text-3xl text-neem-700">₹0</div><div class="text-sm text-slate-600" data-en="for the site inspection visit" data-hi="साइट जांच के लिए कोई शुल्क नहीं">for the site inspection visit</div></div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-20">
-  <div class="max-w-2xl">
-    <h2 class="h-display font-extrabold text-3xl sm:text-4xl leading-tight" data-en="Every pest, one trusted team" data-hi="हर कीट के लिए एक भरोसेमंद टीम">Every pest, one trusted team</h2>
-    <p class="text-slate-600 mt-3 text-base sm:text-lg" data-en="Pick a service to see the price for your property, or book it straight away." data-hi="कोई भी सेवा चुनें। अपनी प्रॉपर्टी के हिसाब से रेट देखें, या सीधे बुक करें।">Pick a service to see the price for your property, or book it straight away.</p>
-  </div>
-  <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-9"></div>
-</section>
-
-<!-- ================= ESTIMATOR ================= -->
-<section id="estimator" class="bg-ink text-white">
-  <div class="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-7 space-y-7">
-      <div>
-        <h2 class="h-display font-extrabold text-3xl sm:text-4xl leading-tight" data-en="Get your price in three taps" data-hi="तीन टैप में अपना रेट जानें">Get your price in three taps</h2>
-        <p class="text-slate-300 mt-3" data-en="This is an estimate. We confirm the final amount after a free site visit." data-hi="यह अनुमानित रेट है। फ्री साइट विज़िट के बाद हम फाइनल रेट बताते हैं।">This is an estimate. We confirm the final amount after a free site visit.</p>
-      </div>
-      <div>
-        <div class="text-sm font-semibold text-slate-300 mb-2.5" data-en="What are you fighting?" data-hi="कौन सा कीट है?">What are you fighting?</div>
-        <div id="estPestPills" class="flex flex-wrap gap-2"></div>
-      </div>
-      <div>
-        <div class="text-sm font-semibold text-slate-300 mb-2.5" data-en="What are we treating?" data-hi="कौन सी प्रॉपर्टी है?">What are we treating?</div>
-        <div id="estSizePills" class="grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
-      </div>
-      <div>
-        <div class="text-sm font-semibold text-slate-300 mb-2.5" data-en="How long a warranty?" data-hi="कितनी वारंटी चाहिए?">How long a warranty?</div>
-        <div id="estWarrantyPills" class="flex flex-wrap gap-2"></div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-5">
-      <div class="lg:sticky lg:top-24 bg-white text-ink rounded-3xl p-6 sm:p-7 shadow-2xl">
-        <div class="flex items-center justify-between gap-2">
-          <span class="text-sm font-semibold text-slate-500" data-en="Your estimate" data-hi="आपका अनुमान">Your estimate</span>
-          <span id="estWarrantyBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 ring-1 ring-amber-200"></span>
-        </div>
-        <div id="estPrice" class="h-display font-extrabold text-4xl sm:text-5xl mt-3 tabular-nums" aria-live="polite"></div>
-        <p id="estSummary" class="text-sm text-slate-600 mt-2"></p>
-        <ul class="mt-5 space-y-2 text-sm text-slate-700">
-          <li class="flex gap-2"><i class="fa-solid fa-check text-neem-600 mt-1"></i><span data-en="Free inspection before any work" data-hi="काम से पहले फ्री जांच">Free inspection before any work</span></li>
-          <li class="flex gap-2"><i class="fa-solid fa-check text-neem-600 mt-1"></i><span data-en="Odorless, government-approved chemicals" data-hi="गंधहीन, सरकार से मान्य दवाएं">Odorless, government-approved chemicals</span></li>
-        </ul>
-        <button onclick="sendEstimatorToWA()" class="w-full h-13 py-3.5 mt-6 rounded-2xl bg-[#1FA855] hover:bg-[#188a45] text-white font-bold text-[15px] flex items-center justify-center gap-2.5 cursor-pointer transition">
-          <i class="fa-brands fa-whatsapp text-xl"></i><span data-en="Book this package on WhatsApp" data-hi="व्हाट्सएप पर यह पैकेज बुक करें">Book this package on WhatsApp</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= HOW IT WORKS ================= -->
-<section id="how" class="max-w-[1240px] mx-auto px-4 sm:px-6 py-14 sm:py-20">
-  <h2 class="h-display font-extrabold text-3xl sm:text-4xl leading-tight max-w-xl" data-en="From first message to written warranty" data-hi="पहले मैसेज से लिखित वारंटी तक">From first message to written warranty</h2>
-  <ol class="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10">
-    <li class="bg-white rounded-2xl p-6 ring-1 ring-line"><div class="h-display font-extrabold text-brand-600 text-2xl">1</div><h3 class="font-bold text-lg mt-3" data-en="Message or call us" data-hi="मैसेज या कॉल करें">Message or call us</h3><p class="text-sm text-slate-600 mt-1.5" data-en="Tell us the pest and your area. We reply the same day." data-hi="कीट और अपना एरिया बताएं। हम उसी दिन जवाब देते हैं।">Tell us the pest and your area. We reply the same day.</p></li>
-    <li class="bg-white rounded-2xl p-6 ring-1 ring-line"><div class="h-display font-extrabold text-brand-600 text-2xl">2</div><h3 class="font-bold text-lg mt-3" data-en="Free site inspection" data-hi="फ्री साइट जांच">Free site inspection</h3><p class="text-sm text-slate-600 mt-1.5" data-en="A technician checks the problem and confirms the exact price." data-hi="टेक्नीशियन समस्या देखकर सही रेट बताता है।">A technician checks the problem and confirms the exact price.</p></li>
-    <li class="bg-white rounded-2xl p-6 ring-1 ring-line"><div class="h-display font-extrabold text-brand-600 text-2xl">3</div><h3 class="font-bold text-lg mt-3" data-en="Odorless treatment" data-hi="गंधहीन ट्रीटमेंट">Odorless treatment</h3><p class="text-sm text-slate-600 mt-1.5" data-en="Drill-fill-seal, gel baiting or spray, depending on the pest." data-hi="कीट के हिसाब से ड्रिल-फिल-सील, जेल बेटिंग या स्प्रे।">Drill-fill-seal, gel baiting or spray, depending on the pest.</p></li>
-    <li class="bg-white rounded-2xl p-6 ring-1 ring-line"><div class="h-display font-extrabold text-brand-600 text-2xl">4</div><h3 class="font-bold text-lg mt-3" data-en="Warranty in writing" data-hi="लिखित वारंटी">Warranty in writing</h3><p class="text-sm text-slate-600 mt-1.5" data-en="You get the warranty on paper. If the pest returns, call us." data-hi="वारंटी कागज़ पर मिलती है। कीट वापस आए तो हमें कॉल करें।">You get the warranty on paper. If the pest returns, call us.</p></li>
-  </ol>
-</section>
-
-<!-- ================= SAFETY ================= -->
-<section class="max-w-[1240px] mx-auto px-4 sm:px-6 pb-14 sm:pb-20">
-  <div class="grid grid-cols-1 lg:grid-cols-2 rounded-[28px] overflow-hidden bg-neem-700 text-white">
-    <div class="relative min-h-[260px] lg:min-h-[420px]">
-      <img id="heroMainImage" alt="IPES technician at work in Prayagraj" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-    </div>
-    <div class="p-7 sm:p-10 lg:p-12 flex flex-col justify-center">
-      <h2 class="h-display font-extrabold text-3xl sm:text-4xl leading-tight" data-en="Safe for the people who live there" data-hi="घर में रहने वालों के लिए सुरक्षित">Safe for the people who live there</h2>
-      <ul class="mt-6 space-y-4 text-[15px]">
-        <li class="flex gap-3"><i class="fa-solid fa-wind mt-1 text-turmeric"></i><span data-en="Odorless treatment, so you can stay home and sleep in the same room." data-hi="गंधहीन ट्रीटमेंट। आप घर में रह सकते हैं।">Odorless treatment, so you can stay home and sleep in the same room.</span></li>
-        <li class="flex gap-3"><i class="fa-solid fa-baby mt-1 text-turmeric"></i><span data-en="Kid-safe Bayer gel for kitchens and bedrooms." data-hi="किचन और बेडरूम के लिए बच्चों के लिए सुरक्षित बायर जेल।">Kid-safe Bayer gel for kitchens and bedrooms.</span></li>
-        <li class="flex gap-3"><i class="fa-solid fa-utensils mt-1 text-turmeric"></i><span data-en="No need to empty your kitchen for cockroach gel." data-hi="कॉकरोच जेल के लिए किचन खाली करने की ज़रूरत नहीं।">No need to empty your kitchen for cockroach gel.</span></li>
-        <li class="flex gap-3"><i class="fa-solid fa-user-shield mt-1 text-turmeric"></i><span data-en="Full safety suit for honey bee hive removal, even on high balconies." data-hi="मधुमक्खी छत्ता हटाने में पूरा सेफ्टी सूट, ऊंची बालकनी में भी।">Full safety suit for honey bee hive removal, even on high balconies.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY + REVIEWS ================= -->
-<section id="gallery" class="max-w-[1240px] mx-auto px-4 sm:px-6 pb-14 sm:pb-20">
-  <h2 class="h-display font-extrabold text-3xl sm:text-4xl leading-tight" data-en="Our work and what neighbours say" data-hi="हमारा काम और पड़ोसियों की राय">Our work and what neighbours say</h2>
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 mt-9">
-    <div id="galleryGrid" class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4"></div>
-    <div class="lg:col-span-5 bg-white rounded-3xl p-6 ring-1 ring-line flex flex-col gap-4">
-      <div class="flex items-center justify-between gap-3">
-        <div class="flex items-center gap-3">
-          <div class="w-11 h-11 rounded-xl bg-amber-50 ring-1 ring-amber-200 flex items-center justify-center text-turmeric text-lg"><i class="fa-brands fa-google"></i></div>
-          <div><div class="font-bold">5.0 <span class="text-turmeric">★★★★★</span></div><div class="text-xs text-slate-500">393 Google reviews</div></div>
-        </div>
-        <a href="https://www.google.com/maps/place//data=!4m2!3m1!19sChIJB82FjvA1hTkRpbLVNA-An1I" target="_blank" rel="noopener noreferrer" class="px-3.5 h-9 inline-flex items-center rounded-xl bg-paper ring-1 ring-line hover:ring-ink text-sm font-semibold" data-en="Read on Google" data-hi="गूगल पर पढ़ें">Read on Google</a>
-      </div>
-      <figure class="p-4 rounded-2xl bg-paper"><blockquote class="text-[15px] leading-relaxed">“Complete termite eradication with zero smell. Very polite team and genuine warranty.”</blockquote><figcaption class="text-sm font-semibold mt-2">Ankit Srivastava, Rajrooppur</figcaption></figure>
-      <figure class="p-4 rounded-2xl bg-paper"><blockquote class="text-[15px] leading-relaxed">“Safely removed a large honeybee hive from our 3rd-floor balcony in 30 minutes.”</blockquote><figcaption class="text-sm font-semibold mt-2">Mohd. Tariq, Kareli</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section id="faq" class="max-w-[900px] mx-auto px-4 sm:px-6 pb-14 sm:pb-20">
-  <h2 class="h-display font-extrabold text-3xl sm:text-4xl leading-tight" data-en="Questions we hear most" data-hi="सबसे ज़्यादा पूछे जाने वाले सवाल">Questions we hear most</h2>
-  <div id="faqList" class="mt-8 divide-y divide-line border-y border-line"></div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="max-w-[1240px] mx-auto px-4 sm:px-6 pb-14 sm:pb-20">
-  <div class="bg-white rounded-[28px] ring-1 ring-line overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-    <div class="lg:col-span-5 p-7 sm:p-9 space-y-6">
-      <div>
-        <h2 class="h-display font-extrabold text-3xl leading-tight" data-en="Visit or call our Prayagraj office" data-hi="प्रयागराज ऑफिस पर आएं या कॉल करें">Visit or call our Prayagraj office</h2>
-        <p class="text-slate-600 mt-2">Indian Pests Eradicator Services</p>
-      </div>
-      <div class="space-y-3 text-[15px]">
-        <div class="flex items-start gap-3 p-4 rounded-2xl bg-paper"><i class="fa-solid fa-location-dot text-brand-600 mt-1"></i><span id="addrText" class="leading-relaxed"></span></div>
-        <a class="phoneLink flex items-center gap-3 p-4 rounded-2xl bg-ink text-white font-bold hover:bg-brand-600 transition" href="#"><i class="fa-solid fa-phone"></i><span class="phoneText"></span></a>
-        <a id="emailLink" href="#" class="flex items-center gap-3 p-4 rounded-2xl bg-paper font-semibold hover:bg-line transition truncate"><i class="fa-regular fa-envelope text-brand-600"></i><span id="emailText" class="truncate"></span></a>
-      </div>
-      <div>
-        <div class="text-sm font-semibold text-slate-600 mb-2.5" data-en="We visit these areas. Tap yours to message us:" data-hi="हम इन इलाकों में जाते हैं। अपना इलाका चुनकर मैसेज करें:">We visit these areas. Tap yours to message us:</div>
-        <div id="areaPills" class="flex flex-wrap gap-2"></div>
-      </div>
-    </div>
-    <div class="lg:col-span-7 min-h-[300px] bg-line">
-      <iframe title="IPES Prayagraj map" src="https://www.google.com/maps?q=60+Feet+Rd,+Kasari+Masari,+Chakiya,+Rajrooppur,+Prayagraj,+Uttar+Pradesh+211016&output=embed" class="w-full h-full min-h-[300px] border-0" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="bg-ink text-slate-300 py-8 px-4 sm:px-6 text-sm">
-  <div class="max-w-[1240px] mx-auto flex flex-wrap items-center justify-between gap-4">
-    <div><span class="font-bold text-white">Indian Pests Eradicator Services (IPES)</span><span class="mx-2 text-slate-500">|</span>Prayagraj, Uttar Pradesh</div>
-    <div class="flex items-center gap-5 font-semibold">
-      <a class="phoneLink hover:text-white" href="#"><i class="fa-solid fa-phone mr-1.5 text-brand-500"></i><span class="phoneText"></span></a>
-      <button onclick="openWA('Website Inquiry')" class="hover:text-white cursor-pointer"><i class="fa-brands fa-whatsapp mr-1.5 text-[#1FA855]"></i>WhatsApp</button>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating WhatsApp (desktop) -->
-<button onclick="openWA('Website Inquiry')" class="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-2.5 pl-4 pr-5 h-14 rounded-full bg-[#1FA855] hover:bg-[#188a45] text-white font-bold shadow-xl shadow-green-900/30 cursor-pointer transition" aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp text-2xl"></i><span data-en="Chat with us" data-hi="चैट करें">Chat with us</span>
-</button>
-
-<!-- Mobile sticky bar -->
-<div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-line p-2.5 grid grid-cols-2 gap-2.5">
-  <a class="phoneLink flex items-center justify-center gap-2 h-12 rounded-xl bg-ink text-white font-bold text-sm" href="#"><i class="fa-solid fa-phone text-brand-500"></i><span data-en="Call now" data-hi="कॉल करें">Call now</span></a>
-  <button onclick="openWA('Mobile Instant Quote')" class="flex items-center justify-center gap-2 h-12 rounded-xl bg-[#1FA855] text-white font-bold text-sm cursor-pointer"><i class="fa-brands fa-whatsapp text-xl"></i><span data-en="WhatsApp" data-hi="व्हाट्सएप">WhatsApp</span></button>
-</div>
-
-<script>
-/* Default content shown until the owner publishes changes. */
-const DEFAULT_SITE_DATA = {
-  whatsappNumber: "918737961540",
-  phoneDisplay: "087379 61540",
-  logoImage: "",
-  heroImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80",
-  texts: {
-    heroHeadlineEn: "Odorless Termite & Pest Protection for Your Home",
-    heroHeadlineHi: "आपके घर के लिए गंधहीन दीमक और कीट सुरक्षा",
-    address: "60 Feet Rd, Kasari Masari, Chakiya, Rajrooppur (Near Naaz Hospital), Prayagraj, UP – 211016",
-    email: "ipesallahabad@gmail.com"
-  },
-  heroBadges: [
-    { subEn: "Termite Shield", subHi: "दीमक वारंटी", mainEn: "5–10 Yrs Warranty", mainHi: "5–10 वर्ष वारंटी" },
-    { subEn: "100% Safe", subHi: "100% सुरक्षित", mainEn: "Odorless & Herbal", mainHi: "गंधहीन एवं हर्बल" },
-    { subEn: "Fast Pricing", subHi: "किफायती दरें", mainEn: "₹499+ Free Visit", mainHi: "₹499+ फ्री जांच" }
-  ],
-  gallery: [
-    { tag: "5–10 Yrs Warranty", title: "Drill-Fill-Seal Termite Shield", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" },
-    { tag: "No Kitchen Emptying", title: "Odorless Kitchen Gel Baiting", image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=600&q=80" },
-    { tag: "Full Safety Suit", title: "Balcony Bee Hive Removal", image: "https://images.unsplash.com/photo-1568526381923-caf3fd520382?auto=format&fit=crop&w=600&q=80" }
-  ],
-  services: [
-    { id: "termite", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80", titleEn: "Anti-Termite Shield", titleHi: "दीमक नियंत्रण (Termite)", warranty: "5–10 Yrs Warranty", priceLabel: "Starts", priceText: "₹1,499 / Free Visit", baseMin: 1499, baseMax: 2499, descEn: "Drill-Fill-Seal • Wardrobe & Foundation Protection", descHi: "ड्रिल-फिल-सील • फर्नीचर और नींव की सुरक्षा" },
-    { id: "cockroach", image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80", titleEn: "Cockroach Gel & Spray", titleHi: "कॉकरोच जेल ट्रीटमेंट", warranty: "6M – 1 Yr Warranty", priceLabel: "Starts", priceText: "₹499 Onwards", baseMin: 499, baseMax: 799, descEn: "No Kitchen Emptying • German Odorless Gel", descHi: "बिना किचन खाली किए • जर्मन गंधहीन जेल" },
-    { id: "honeybee", image: "https://images.unsplash.com/photo-1568526381923-caf3fd520382?auto=format&fit=crop&w=700&q=80", titleEn: "Honey Bee Hive Removal", titleHi: "मधुमक्खी छत्ता हटाना", warranty: "100% Safe Removal", priceLabel: "Starts", priceText: "₹799 Onwards", baseMin: 799, baseMax: 1499, descEn: "Full Safety Suit • High-Rise Balcony Experts", descHi: "सुरक्षा सूट • ऊंची बालकनी से सुरक्षित सफाई" },
-    { id: "bedbug", image: "https://images.unsplash.com/photo-1540518614846-7ede433c4573?auto=format&fit=crop&w=700&q=80", titleEn: "Bed Bug Eradication", titleHi: "खटमल नियंत्रण (Bed Bug)", warranty: "6 Months Warranty", priceLabel: "Starts", priceText: "₹499 Onwards", baseMin: 599, baseMax: 999, descEn: "Deep Mattress & Sofa Seam Egg Elimination", descHi: "गद्दे और सोफे से खटमल व अंडों का सफाया" },
-    { id: "rodent", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80", titleEn: "Rat & Rodent Control", titleHi: "चूहा और छछूंदर नियंत्रण", warranty: "3–6M Protection", priceLabel: "Starts", priceText: "₹499 Onwards", baseMin: 499, baseMax: 899, descEn: "Car Wiring, Home & Godown Bait Stations", descHi: "कार वायरिंग, घर और गोदाम की सुरक्षा" },
-    { id: "mosquito", image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80", titleEn: "Mosquito Fogging", titleHi: "मच्छर फॉगिंग व स्प्रे", warranty: "Dengue Shield", priceLabel: "Starts", priceText: "₹499 Onwards", baseMin: 499, baseMax: 899, descEn: "Cold Misting & Outdoor Thermal Fogging", descHi: "डेंगू और मलेरिया रोधी कोल्ड मिस्टिंग" },
-    { id: "lizard", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80", titleEn: "Lizard, Ant & Spider", titleHi: "छिपकली और चींटी नियंत्रण", warranty: "6 Months Warranty", priceLabel: "Starts", priceText: "₹499 Onwards", baseMin: 499, baseMax: 799, descEn: "Stain-Free Wall & Modular Kitchen Shield", descHi: "बिना दाग-धब्बे के दीवारों और किचन की सुरक्षा" },
-    { id: "herbal", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80", titleEn: "Commercial & Herbal AMC", titleHi: "कमर्शियल एवं हर्बल AMC", warranty: "1 Yr Full AMC", priceLabel: "Plans", priceText: "₹499+ / Custom", baseMin: 499, baseMax: 999, descEn: "Hospitals, Hotels, Schools & Kid-Safe Homes", descHi: "होटल, अस्पताल, स्कूल और बच्चों के लिए सुरक्षित" }
-  ],
-  propertyTypes: [
-    { label: "1 Room / Kitchen / Car", multiplier: "1" },
-    { label: "1–2 BHK Flat", multiplier: "1.5" },
-    { label: "3–4 BHK House", multiplier: "2.2" },
-    { label: "Shop / Office", multiplier: "2.5" },
-    { label: "New Construction", multiplier: "custom" },
-    { label: "Hospital / Hotel", multiplier: "custom" }
-  ],
-  warranties: [
-    { name: "Standard (3–6 Months)", badge: "3–6M Warranty", multiplier: 1 },
-    { name: "1 Year Full AMC", badge: "1 Yr AMC", multiplier: 1.35 },
-    { name: "5 Yrs Termite Warranty", badge: "5 Yrs Written", multiplier: 1.75 },
-    { name: "10 Yrs Termite Shield", badge: "10 Yrs Written", multiplier: 2.2 },
-    { name: "Free Site Inspection", badge: "Free Visit", multiplier: 1 }
-  ],
-  faqs: [
-    { qEn: "Is the treatment safe for children and pets?", qHi: "क्या ट्रीटमेंट बच्चों और पालतू जानवरों के लिए सुरक्षित है?",
-      aEn: "We use odorless, government-approved chemicals, and kid-safe Bayer gel in kitchens. Our technician will tell you how long to keep children and pets away from treated areas.",
-      aHi: "हम गंधहीन, सरकार से मान्य दवाएं और किचन में बच्चों के लिए सुरक्षित बायर जेल इस्तेमाल करते हैं। टेक्नीशियन बताएगा कि ट्रीट किए गए हिस्से से बच्चों और पालतू जानवरों को कितनी देर दूर रखना है।" },
-    { qEn: "Do I need to empty my kitchen?", qHi: "क्या किचन खाली करना पड़ेगा?",
-      aEn: "No. Cockroach gel baiting works without emptying your kitchen.",
-      aHi: "नहीं। कॉकरोच जेल बेटिंग के लिए किचन खाली करने की ज़रूरत नहीं है।" },
-    { qEn: "How long does the termite warranty last?", qHi: "दीमक की वारंटी कितने साल की होती है?",
-      aEn: "Termite treatment comes with a written warranty of 5 to 10 years. Pick the plan in the price calculator.",
-      aHi: "दीमक ट्रीटमेंट पर 5 से 10 साल की लिखित वारंटी मिलती है। प्राइस कैलकुलेटर में अपना प्लान चुनें।" },
-    { qEn: "How is the price decided?", qHi: "रेट कैसे तय होता है?",
-      aEn: "It depends on the pest, the size of your property and the warranty you choose. The site inspection is free, and we confirm the final price before starting.",
-      aHi: "रेट कीट, प्रॉपर्टी के साइज़ और चुनी गई वारंटी पर निर्भर करता है। साइट जांच फ्री है और काम शुरू करने से पहले हम फाइनल रेट बता देते हैं।" },
-    { qEn: "Which areas of Prayagraj do you cover?", qHi: "प्रयागराज के किन इलाकों में आप जाते हैं?",
-      aEn: "Rajrooppur, Civil Lines, Kareli, Kalindipuram, Naini, Jhunsi, Sulem Sarai, George Town and nearby areas. Message us your area to check.",
-      aHi: "राजरूपपुर, सिविल लाइन्स, करेली, कालिंदीपुरम, नैनी, झूंसी, सुलेम सराय, जॉर्ज टाउन और आसपास। अपना इलाका मैसेज करके पूछ लें।" }
-  ]
-};
-
-/* ============ State & helpers ============ */
-let siteData = JSON.parse(JSON.stringify(DEFAULT_SITE_DATA));
-let lang = "en";
-const sel = { pest: 0, size: 0, war: 0 };
-let active = 0, shown = { min: null, max: null }, tweenId = 0;
-const AREAS = ["Rajrooppur","Civil Lines","Kareli","Kalindipuram","Naini","Jhunsi","Sulem Sarai","George Town"];
-const FALLBACK_IMG = "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80";
-const HOTSPOTS = [
-  { id: "termite", x: 200, y: 388, icon: "fa-house-crack" },
-  { id: "cockroach", x: 150, y: 322, icon: "fa-utensils" },
-  { id: "bedbug", x: 150, y: 248, icon: "fa-bed" },
-  { id: "honeybee", x: 430, y: 192, icon: "fa-bug" },
-  { id: "lizard", x: 312, y: 296, icon: "fa-spider" },
-  { id: "rodent", x: 452, y: 344, icon: "fa-car" },
-  { id: "mosquito", x: 38, y: 384, icon: "fa-droplet" },
-  { id: "herbal", x: 558, y: 303, icon: "fa-building" }
-];
-
-const $ = (id) => document.getElementById(id);
-const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
-const pick = (en, hi) => (lang === "hi" && hi ? hi : en);
-const inr = (n) => "₹" + Math.round(n).toLocaleString("en-IN");
-
-function mergeData(remote) {
-  const d = JSON.parse(JSON.stringify(DEFAULT_SITE_DATA));
-  Object.keys(remote || {}).forEach((k) => {
-    if (k === "texts") d.texts = Object.assign({}, d.texts, remote.texts);
-    else if (remote[k] !== undefined && remote[k] !== null) d[k] = remote[k];
-  });
-  return d;
-}
-
-/* ============ Render ============ */
-function render() {
-  const d = siteData;
-  const logo = $("brandLogoImg");
-  if (d.logoImage) { logo.src = d.logoImage; logo.classList.remove("hidden"); $("brandLogoSvg").style.display = "none"; }
-  $("heroMainImage").src = d.heroImage || FALLBACK_IMG;
-  $("heroHeadline").textContent = pick(d.texts.heroHeadlineEn, d.texts.heroHeadlineHi);
-
-  document.querySelectorAll(".phoneLink").forEach((a) => (a.href = "tel:+" + d.whatsappNumber));
-  document.querySelectorAll(".phoneText").forEach((s) => (s.textContent = d.phoneDisplay));
-  $("addrText").textContent = d.texts.address;
-  $("emailLink").href = "mailto:" + d.texts.email;
-  $("emailText").textContent = d.texts.email;
-
-  $("heroBadges").innerHTML = d.heroBadges.map((b) => `
-    <li class="bg-white rounded-2xl p-3.5 ring-1 ring-line">
-      <div class="text-xs text-slate-500">${esc(pick(b.subEn, b.subHi))}</div>
-      <div class="font-bold text-[15px] mt-0.5">${esc(pick(b.mainEn, b.mainHi))}</div>
-    </li>`).join("");
-
-  if (sel.pest >= d.services.length) sel.pest = 0;
-  if (sel.size >= d.propertyTypes.length) sel.size = 0;
-  if (sel.war >= d.warranties.length) sel.war = 0;
-  if (active >= d.services.length) active = 0;
-
-  renderHouse();
-  renderServices();
-  renderEstimator();
-  renderGallery();
-  renderFaq();
-
-  $("areaPills").innerHTML = AREAS.map((a) =>
-    `<button onclick="openWA('Inspection in ${a}')" class="px-3.5 h-9 rounded-full bg-paper ring-1 ring-line hover:bg-ink hover:text-white hover:ring-ink text-sm font-semibold transition cursor-pointer">${a}</button>`).join("");
-
-  calc(false);
-}
-
-function renderHouse() {
-  const d = siteData;
-  let html = "", i = 0;
-  HOTSPOTS.forEach((h) => {
-    const idx = d.services.findIndex((s) => s.id === h.id);
-    if (idx < 0) return;
-    const s = d.services[idx], on = idx === active;
-    const left = (h.x / 580 * 100).toFixed(2), top = (h.y / 440 * 100).toFixed(2);
-    const name = esc(pick(s.titleEn, s.titleHi));
-    html += `<button class="hs ${on ? "on" : ""}" style="left:${left}%;top:${top}%;animation-delay:${0.5 + i * 0.09}s" onclick="selectHotspot(${idx})" aria-label="${name}" aria-pressed="${on}"><i class="fa-solid ${h.icon}"></i></button>`;
-    if (on) html += `<span class="hs-chip" style="left:${Math.min(Math.max(+left, 16), 84)}%;top:${top}%">${name}</span>`;
-    i++;
-  });
-  $("hotspotLayer").innerHTML = html;
-
-  const s = d.services[active];
-  if (!s) return;
-  $("hotspotPanel").innerHTML = `
-    <div class="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-paper ring-1 ring-line">
-      <img src="${esc(s.image || FALLBACK_IMG)}" alt="" class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover bg-line shrink-0" />
-      <div class="min-w-0 flex-1">
-        <div class="font-bold text-[15px] sm:text-base leading-snug">${esc(pick(s.titleEn, s.titleHi))}</div>
-        <div class="text-xs sm:text-sm text-slate-600 mt-0.5 line-clamp-2">${esc(pick(s.descEn, s.descHi))}</div>
-        <div class="flex items-center gap-2 mt-1.5 flex-wrap">
-          <span class="text-sm font-bold">${esc(s.priceText)}</span>
-          <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 ring-1 ring-amber-200">${esc(s.warranty)}</span>
-        </div>
-      </div>
-      <div class="flex flex-col gap-1.5 shrink-0">
-        <button onclick="bookService(${active})" class="h-10 px-3.5 rounded-xl bg-[#1FA855] hover:bg-[#188a45] text-white text-sm font-bold inline-flex items-center justify-center gap-1.5 cursor-pointer"><i class="fa-brands fa-whatsapp text-base"></i>${lang === "hi" ? "बुक करें" : "Book"}</button>
-        <button onclick="goEstimate(${active})" class="h-8 px-3 rounded-lg text-xs font-semibold text-slate-700 hover:text-ink underline underline-offset-2 cursor-pointer">${lang === "hi" ? "रेट देखें" : "See price"}</button>
-      </div>
-    </div>`;
-}
-
-function renderServices() {
-  $("servicesGrid").innerHTML = siteData.services.map((s, i) => `
-    <article class="svc-card bg-white rounded-3xl overflow-hidden ring-1 ring-line flex flex-col">
-      <div class="relative h-44 overflow-hidden bg-line">
-        <img src="${esc(s.image || FALLBACK_IMG)}" alt="${esc(s.titleEn)}" class="w-full h-full object-cover" loading="lazy" />
-        <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-bold bg-white text-ink shadow">${esc(s.warranty)}</span>
-      </div>
-      <div class="p-5 flex-1 flex flex-col">
-        <h3 class="font-bold text-lg leading-snug">${esc(pick(s.titleEn, s.titleHi))}</h3>
-        <p class="text-sm text-slate-600 mt-1.5 flex-1">${esc(pick(s.descEn, s.descHi))}</p>
-        <div class="flex items-end justify-between gap-2 mt-4 pt-4 border-t border-line">
-          <div><div class="text-xs text-slate-500">${esc(s.priceLabel || "Starts")}</div><div class="h-display font-extrabold text-lg">${esc(s.priceText)}</div></div>
-          <div class="flex gap-1.5">
-            <button onclick="goEstimate(${i})" class="h-10 px-3 rounded-xl bg-paper ring-1 ring-line hover:ring-ink text-sm font-semibold cursor-pointer" aria-label="Calculate price for ${esc(s.titleEn)}"><i class="fa-solid fa-calculator"></i></button>
-            <button onclick="bookService(${i})" class="h-10 px-4 rounded-xl bg-ink hover:bg-[#1FA855] text-white text-sm font-bold inline-flex items-center gap-1.5 cursor-pointer transition"><i class="fa-brands fa-whatsapp"></i>${lang === "hi" ? "बुक करें" : "Book"}</button>
-          </div>
-        </div>
-      </div>
-    </article>`).join("");
-}
-
-function pill(on, onclick, label, check) {
-  return `<button type="button" onclick="${onclick}" aria-pressed="${on}" class="px-4 min-h-[40px] py-2 rounded-xl text-sm font-semibold cursor-pointer transition text-left flex items-center justify-between gap-2 ${on ? "bg-white text-ink shadow" : "bg-white/10 text-white hover:bg-white/20"}"><span>${label}</span>${on && check ? '<i class="fa-solid fa-circle-check text-neem-600"></i>' : ""}</button>`;
-}
-function renderEstimator() {
-  const d = siteData;
-  $("estPestPills").innerHTML = d.services.map((s, i) => pill(i === sel.pest, `setSel('pest',${i})`, esc(pick(s.titleEn, s.titleHi)))).join("");
-  $("estSizePills").innerHTML = d.propertyTypes.map((p, i) => pill(i === sel.size, `setSel('size',${i})`, esc(p.label), true)).join("");
-  $("estWarrantyPills").innerHTML = d.warranties.map((w, i) => pill(i === sel.war, `setSel('war',${i})`, esc(w.name))).join("");
-}
-
-function renderGallery() {
-  $("galleryGrid").innerHTML = (siteData.gallery || []).map((g) => `
-    <figure class="relative rounded-3xl overflow-hidden h-56 bg-ink">
-      <img src="${esc(g.image)}" alt="${esc(g.title)}" class="w-full h-full object-cover opacity-90" loading="lazy" />
-      <figcaption class="absolute inset-0 bg-gradient-to-t from-ink/85 via-transparent to-transparent flex items-end p-4">
-        <div><div class="text-xs font-semibold text-turmeric">${esc(g.tag)}</div><div class="text-white font-bold text-sm mt-0.5">${esc(g.title)}</div></div>
-      </figcaption>
-    </figure>`).join("");
-}
-
-function renderFaq() {
-  $("faqList").innerHTML = (siteData.faqs || []).map((f) => `
-    <details class="faq group py-1">
-      <summary class="flex items-center justify-between gap-4 py-4 text-left font-bold text-base sm:text-lg">
-        <span>${esc(pick(f.qEn, f.qHi))}</span>
-        <span class="faq-plus w-8 h-8 shrink-0 rounded-full bg-white ring-1 ring-line flex items-center justify-center"><i class="fa-solid fa-plus text-sm"></i></span>
-      </summary>
-      <p class="pb-5 pr-12 text-slate-600 leading-relaxed">${esc(pick(f.aEn, f.aHi))}</p>
-    </details>`).join("");
-}
-
-/* ============ Actions ============ */
-function selectHotspot(i) { active = i; sel.pest = i; renderHouse(); renderEstimator(); calc(true); }
-function setSel(k, i) { sel[k] = i; renderEstimator(); calc(true); if (k === "pest") { active = i; renderHouse(); } }
-function goEstimate(i) { sel.pest = i; active = i; renderHouse(); renderEstimator(); calc(true); $("estimator").scrollIntoView({ behavior: "smooth", block: "start" }); }
-function bookService(i) { const s = siteData.services[i]; openWA(`${s.titleEn} (${s.priceText} | ${s.warranty})`); }
-function toggleMenu() {
-  const m = $("mobileMenu"), b = $("menuBtn");
-  const open = m.classList.toggle("hidden") === false;
-  b.setAttribute("aria-expanded", open);
-  b.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-}
-
-function calc(animate) {
-  const d = siteData;
-  const s = d.services[sel.pest], p = d.propertyTypes[sel.size], w = d.warranties[sel.war];
-  if (!s || !p) return;
-  $("estWarrantyBadge").textContent = w ? w.badge : s.warranty;
-  $("estSummary").textContent = `${s.titleEn} • ${p.label}`;
-  const out = $("estPrice");
-  cancelAnimationFrame(tweenId);
-  if (String(p.multiplier).toLowerCase() === "custom") {
-    out.textContent = lang === "en" ? "Free site quote" : "मुफ्त साइट कोटेशन";
-    shown = { min: null, max: null };
-    return;
-  }
-  const pm = parseFloat(p.multiplier) || 1, wm = w ? parseFloat(w.multiplier) || 1 : 1;
-  const min = Math.max(99, Math.round((parseFloat(s.baseMin) * pm * wm) / 50) * 50 - 1);
-  const max = Math.max(min + 100, Math.round((parseFloat(s.baseMax) * pm * wm) / 50) * 50 - 1);
-  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!animate || reduce || shown.min === null) { out.textContent = `${inr(min)} – ${inr(max)}*`; shown = { min, max }; return; }
-  const from = { ...shown }, t0 = performance.now(), dur = 380;
-  const step = (now) => {
-    const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
-    out.textContent = `${inr(from.min + (min - from.min) * e)} – ${inr(from.max + (max - from.max) * e)}*`;
-    if (k < 1) tweenId = requestAnimationFrame(step); else shown = { min, max };
-  };
-  tweenId = requestAnimationFrame(step);
-}
-
-function waLink(msg) { return `https://wa.me/${siteData.whatsappNumber}?text=${encodeURIComponent(msg)}`; }
-function openWA(topic) {
-  window.open(waLink(`Hello *Indian Pests Eradicator Services (Prayagraj)*,\n\nI want to book / inquire about:\n👉 *${topic}*\n\nPlease share details or schedule a FREE inspection.`), "_blank");
-}
-function sendEstimatorToWA() {
-  const d = siteData, s = d.services[sel.pest], p = d.propertyTypes[sel.size], w = d.warranties[sel.war];
-  window.open(waLink(`Hello *Indian Pests Eradicator Services*,\n\nI selected this package on your *Cost Estimator*:\n• *Service:* ${s.titleEn}\n• *Property:* ${p.label}\n• *Warranty:* ${w ? w.name : "Standard"}\n• *Estimate:* ${$("estPrice").textContent}\n\nPlease confirm availability.`), "_blank");
-}
-
-function toggleLanguage() {
-  lang = lang === "en" ? "hi" : "en";
-  document.documentElement.lang = lang;
-  $("langLabel").textContent = lang === "en" ? "हिंदी" : "ENG";
-  document.querySelectorAll("[data-en][data-hi]").forEach((el) => (el.textContent = el.getAttribute("data-" + lang)));
-  render();
-}
-
-/* Count-up for the trust strip, once when it scrolls into view */
-function setupCounters() {
-  const els = document.querySelectorAll("[data-count]");
-  const run = (el) => {
-    const to = +el.dataset.count, t0 = performance.now(), dur = 900;
-    const f = (now) => { const k = Math.min(1, (now - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(f); };
-    requestAnimationFrame(f);
-  };
-  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce || !("IntersectionObserver" in window)) { els.forEach((el) => (el.textContent = el.dataset.count)); return; }
-  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }), { threshold: 0.6 });
-  els.forEach((el) => io.observe(el));
-}
-
-/* ============ Boot ============ */
-(function boot() {
-  const t = siteData.services.findIndex((s) => s.id === "termite");
-  active = t >= 0 ? t : 0; sel.pest = active;
-  render();
-  setupCounters();
-  // Swap in the owner's published data from Google Drive (only works inside the Apps Script web app)
-  if (typeof google !== "undefined" && google.script && google.script.run) {
-    google.script.run
-      .withSuccessHandler((txt) => { if (txt) { try { siteData = mergeData(JSON.parse(txt)); render(); } catch (e) {} } })
-      .withFailureHandler(() => {})
-      .getSiteData();
-  }
-})();
-</script>
 </body>
 </html>
