@@ -1,101 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <title>IPES Prayagraj | Indian Pests Eradicator Services</title>
-  <meta name="description" content="5.0★ Rated (393+ Google Reviews) Pest Control in Prayagraj. Termite, Cockroach, Honey Bee Hive, Bed Bug, Rodent & Mosquito Control. Call 087379 61540.">
-  <meta name="theme-color" content="#0f172a">
-  <link rel="icon" href="Logo.jpg" type="image/jpeg">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-      height: 100dvh;
-      overflow: hidden;
-      background: #f8fafc;
-      font-family: system-ui, -apple-system, sans-serif;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .iframe-crop-box {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      height: 100dvh;
-      overflow: hidden;
-      background: #f8fafc;
-    }
-
-    .iframe-crop-box iframe {
-      position: absolute;
-      top: 0px;
-      left: 0;
-      width: 100%;
-      height: calc(100% + 38px);
-      border: none;
-      display: block;
-    }
-
-    #loader {
-      position: fixed;
-      inset: 0;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #f8fafc;
-      color: #0f172a;
-      transition: opacity 0.35s ease, visibility 0.35s ease;
-    }
-
-    #loader.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .spinner {
-      width: 36px;
-      height: 36px;
-      border: 3px solid #e2e8f0;
-      border-top-color: #dc2626;
-      border-radius: 50%;
-      animation: spin 0.75s linear infinite;
-      margin-bottom: 10px;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Website</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f8fafc;
+      -webkit-overflow-scrolling: touch;
+    }
+    .iframe-crop-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .iframe-crop-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-
-  <div id="loader">
-    <div class="spinner"></div>
-    <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.04em; color: #475569;">LOADING IPES PRAYAGRAJ...</span>
-  </div>
-
-  <div class="iframe-crop-box">
-    <iframe 
-      id="gasFrame"
-      title="IPES Prayagraj | Indian Pests Eradicator Services"
-      src="https://script.google.com/macros/s/AKfycbwXqmQp7Z70b7fPlrs6cm5SNyo7xSO6oYY52XimHRZ593UyjDxtVzczXrB8wVUBbG1-Hw/exec" 
-      allow="camera *; microphone *; geolocation *; clipboard-write *; fullscreen *"
-      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation allow-modals"
-      onload="document.getElementById('loader').classList.add('hidden');">
-    </iframe>
-  </div>
-
+  <div class="iframe-crop-box">
+    <iframe 
+      src="https://script.google.com/macros/s/AKfycbwXqmQp7Z70b7fPlrs6cm5SNyo7xSO6oYY52XimHRZ593UyjDxtVzczXrB8wVUBbG1-Hw/exec" 
+      allow="camera *; microphone *; geolocation *; clipboard-write *; fullscreen *">
+    </iframe>
+  </div>
 </body>
 </html>
